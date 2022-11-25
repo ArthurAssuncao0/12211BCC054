@@ -3,8 +3,6 @@
 
 int main( ) {
      
-     printf ("Repository"\n);
+   printf ("Repository"\n);
      
- system("pause"); 
- Return 0;
- }
+ system("pause"); Return 0; }
