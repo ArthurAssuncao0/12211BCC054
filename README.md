@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-
-int main( ) {
+int main(){
      
-   printf ("Repository"\n);
+   printf("Repository"\n);
      
  system("pause"); 
  
