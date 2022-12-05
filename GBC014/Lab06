@@ -423,6 +423,150 @@ return 0;
 
 /7
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+int main(){
+    int mat[5][5] = {}, vet[25], r = 0, c =0, c1 = 0, c2 = 0, c3 = 0, i = 0, j = 0;
+    srand(time(NULL));
+    
+    for (c3 = 0; c3 < 25; c3++){
+        do{
+            vet[c3] = (rand() % 100);
+
+            r = 0;
+
+            for (int c1 = 0; c1 < c2; c1++){
+                if (vet[c1] == vet[c2]){
+                    r++;
+                }
+            }
+
+        }
+        while(r != 0);
+        c2++;
+    }
+    
+    for (i = 0; i < 5; i++){
+        for (j = 0; j < 5; j++){
+           mat[i][j] = vet[c];
+            c++;
+        }
+    }
+
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 5; j++){
+            printf("%d", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+system("pause");
+return 0;
+}
 
 /8
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int mat[2][2], mat_2[2][2], mat_r[2][2], i = 0,j = 0,n = 0;
+    char k;
+
+    printf("Primeira matriz:\n");
+
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 2; j++){
+            printf("Digite um numero [%d][%d]:\n", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    
+    printf("Segunda matriz:\n");
+
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 2; j++){
+            printf("Digite um nuemro [%d][%d]:\n", i, j);
+            scanf("%d", &mat_2[i][j]);
+        }
+    }
+    
+    do{
+        printf("Selecione uma opcao:\n1 - Somar duas matrizes\n2 - Subtrair a primeira matriz pela segunda\n3 - Adicionar uma constante em ambas matrizes\n4 - Imprimir ambas as matrizes\n");
+        scanf(" %c", &k);
+
+        if (k == '1' || k == '2' || k == '3' || k == '4')
+            k = k - 32;
+    } 
+    while ((k != '1') && (k != '2') && (k != '3') && (k != '4'));
+
+    switch (k){
+        case '1':
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    mat_r[i][j] = mat[i][j] + mat_2[i][j];
+                }
+            }
+
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    printf("[ %d ] ",mat_r[i][j]);
+                }
+                printf("\n");
+            }
+        break;
+        
+        case '2':
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    mat_r[i][j] = mat[i][j] - mat_2[i][j];
+                }
+            }
+
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    printf("%d",mat_r[i][j]);
+                }
+                printf("\n");
+            }
+        break;
+
+        case '3':
+            printf("Digite a linha que voce deseja trocar: ");
+            scanf("%d", &i);
+            
+            printf("Digite a coluna que voce deseja trocar: ");
+            scanf("%d", &j);
+
+            printf("Digite o numero que voce deseja adicionar: ");
+            scanf("%d", &n);
+
+            mat[i][j] = n;
+            mat_2[i][j] = n;
+
+            printf("\n");
+
+        break;
+
+        case '4':
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    printf("%d",mat[i][j]);
+                }
+                printf("\n");
+            }
+
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++){
+                    printf("[ %d ] ",mat_2[i][j]);
+                }
+                printf("\n");
+            }
+        break;
+    }
+
+system("pause");
+return 0;
+}
