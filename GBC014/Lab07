@@ -440,7 +440,7 @@ return 0;
 #include <string.h>
 
 int main(){
-    char stg[20], stg2[20], x, l, sub;
+    char stg[100], stg2[100], stgA[20], x, l, sub;
     int c = 0, r = 0, i = 0, t = 0, y = 0;
 
     do{
@@ -466,15 +466,15 @@ int main(){
     if (x == 'a' || x == 'A'){
         fflush(stdin);
         printf("Digite uma frase:\n");
-        scanf("%20[^\n]", stg2);
+        scanf("%20[^\n]", stgA);
 
-        printf("A frase digitada foi:\n%s\n", stg2);
+        printf("A frase digitada foi:\n%s\n", stgA);
     
     return 0;
     }
 
     printf("Digite um frase:\n");
-    scanf("%20[^\n]", stg);
+    scanf("%100[^\n]", stg);
 
     y = strlen(stg);
 
@@ -485,7 +485,7 @@ int main(){
     else if (x == 'c' || x == 'C'){
         fflush(stdin);
         printf("Digite uma frase para comparacao com a primeira digitada:\n");
-        scanf("%20[^\n]", stg2);
+        scanf("%100[^\n]", stg2);
 
         printf("O resultado da comparacao eh: %d\n", strcmp(stg, stg2));
     }
@@ -493,9 +493,9 @@ int main(){
     else if (x == 'd' || x == 'D'){
         fflush(stdin);
         printf("Digite uma frase para concatenar na primeira digitada:\n");
-        scanf("%20[^\n]", stg2);
+        scanf("%100[^\n]", stg2);
 
-        printf("%s", strcat(stg, stg2));
+        printf("%s\n", strcat(stg, stg2));
     }
 
     else if (x == 'e' || x == 'E'){
@@ -510,7 +510,7 @@ int main(){
         fflush(stdin);
         printf("Digite o caracter que voce deseja contar:\n");
         scanf("%c", &l);
-        for (c = 0; c < 20; c++){
+        for (c = 0; c < 100; c++){
             if (stg[c] == l){
                 r++;
             }
@@ -525,7 +525,7 @@ int main(){
         fflush(stdin);
         printf("Digite um caracter para substitui-lo:\n");
         scanf("%c", &sub);
-        for (c = 0; c < 20; c++){
+        for (c = 0; c < 100; c++){
             if (stg[c] == l){
                 stg[c] = sub;
             }
@@ -536,7 +536,7 @@ int main(){
     else if (x == 'h' || x == 'H'){
         fflush(stdin);
         printf("Digite uma frase para saber se eh subfrase da primeira frase digitada:\n");
-        scanf("%20[^\n]", stg2);
+        scanf("%100[^\n]", stg2);
         r = strstr(stg, stg2);
         if(r){
             printf("Eh subfrase\n");
