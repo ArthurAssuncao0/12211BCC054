@@ -504,4 +504,3 @@ int main (){
     return 0;  
 }
 
-Lab10.c
