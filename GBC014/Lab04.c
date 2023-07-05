@@ -650,5 +650,3 @@ int main (){
 system("pause");        
 return 0;
 }      
-
-Lab04.c
