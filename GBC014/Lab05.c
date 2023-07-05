@@ -821,6 +821,3 @@ int loop (int x){
         printf("\n");
     }
 }
-
-
-Lab05.c
