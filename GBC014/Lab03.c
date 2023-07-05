@@ -1598,5 +1598,3 @@ system("pause");
 return 0;    
 
 }
-
-Lab03.c
