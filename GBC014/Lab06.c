@@ -570,5 +570,3 @@ int main(){
 system("pause");
 return 0;
 }
-
-Lab06.c
