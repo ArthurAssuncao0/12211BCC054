@@ -592,6 +592,3 @@ system("pause");
 return 0;
 }
 
-
-
-Lab07.c
