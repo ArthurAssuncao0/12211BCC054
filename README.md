@@ -1,6 +1,6 @@
 ## Informations
 
-- In this repository are the source codes for the exercises in the "Procedural Programming" course that I took in the first period of college (2022-1). All exercises were done by Arthur Alves Assunção using the C development language.
+- This repository contains the source codes for the exercises in the "Procedural Programming" course I took in my first term at university (2022-1). All the exercises were done by Arthur Alves Assunção using the C development language
  
 <a href="https://facom.ufu.br/pessoas/docentes/claudiney-ramos-tinoco" target="_blank"><img src="https://img.shields.io/badge/Mastered%20by-9370DB.svg"></a>
 
